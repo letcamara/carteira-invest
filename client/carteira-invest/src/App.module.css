@@ -1,0 +1,27 @@
+.wrapper {
+	max-width: 70rem;
+	margin: 2rem auto;
+	padding: 0 1rem;
+
+	display: grid;
+	grid-template-columns: 256px 1fr;
+	/*o primeiro é uma largura fixa e o segundo é para quando der na tela*/
+	gap: 2rem;
+	align-items: flex-start;
+}
+
+@media(max-width: 768px){
+	html {
+		font-size: 87.5%;
+		/*
+			font-size:14px ou seja
+			16 -> 100%
+			14 -> x
+			14 * 100 / 16 = 87.5
+		*/
+	}
+	.wrapper {
+		grid-template-columns: 1fr;
+		/*Agora, o grid tem somente uma coluna que ocupa toda largura*/
+	}
+}
