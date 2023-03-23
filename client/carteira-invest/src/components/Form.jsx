@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import styles from './Form.module.css';
+import Axios from "axios"
 
 export function Form(){
 	const [values, setValues] = useState();
@@ -12,7 +13,13 @@ export function Form(){
 	}
 
 	const handleClickButton = () =>{
-		console.log(values)
+		Axios.post("http://localhost:5174/register", {
+			name: values.name,
+			cost: values.cost,
+			category: values.category
+		}).then((response)=>{
+			console.log(response)
+		})
 	}
 
 	return (

@@ -1,5 +1,6 @@
 import { Header } from './components/Header';
 import { Form } from './components/Form';
+import { Card } from './components/Card';
 import styles from './App.module.css';
 import './global.css'
 
@@ -11,6 +12,7 @@ export function App() {
 			<h1>Carteira</h1>
 		</div>
 		<Form className={styles.wrapper}></Form>
+		<Card></Card>
 	</div>
   )
 }
