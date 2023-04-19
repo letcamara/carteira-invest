@@ -43,7 +43,11 @@ a:hover {
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
+  font-size: 1em;
+  line-height: 1.6;
+  background: #eee
 }
 
 h1 {

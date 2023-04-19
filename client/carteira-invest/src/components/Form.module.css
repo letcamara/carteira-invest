@@ -45,7 +45,7 @@
 	margin-top: var(--base-vertical-rhythm);
 }
 
-label {
+.form form label {
 	position: absolute;
 	top: var(--input-padding);
 	left: calc(var(--input-padding) + 1px);
@@ -65,24 +65,24 @@ label {
 	transform: translateY(0);
 }
 
-label .error {
+.form form label .error {
 	color: var(--input-error-color);
 	opacity: 0;
 	transition: opacity var(--base-transition);
 }
 
-label .error:before {
+.form form label .error:before {
 	content: ' - ';
 }
 
-input[type=text]:not(:placeholder-shown) + label,
-input[type=email]:not(:placeholder-shown) + label {
+.form form input[type=text]:not(:placeholder-shown) + label,
+.form form input[type=email]:not(:placeholder-shown) + label {
 	opacity: 1;
 	transform: translateY(0);
 }
 
-input[type="text"],
-input[type="email"] {
+.form form input[type="text"],
+.form form input[type="email"] {
 	-webkit-appearance: none;
 	padding: calc(var(--input-padding) * 1.5) var(--input-padding);
 	font-family: var(--base-font-family);
@@ -97,57 +97,57 @@ input[type="email"] {
 	transition: border-color var(--base-transition), box-shadow var(--base-transition), transition var(--base-transition);
 }
 
-input[type="text"]::placeholder,
-input[type="email"]::placeholder {
+.form form input[type="text"]::placeholder,
+.form form input[type="email"]::placeholder {
 	color: var(--input-placeholder-color);
 	transition: color var(--base-transition), transform var(--base-transition);
 	transition-delay: 200ms;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus {
+.form form input[type="text"]:focus,
+.form form input[type="email"]:focus {
 	border-color: var(--input-border-focus-color);
 	box-shadow: none;
 }
 
-input[type="text"]:focus::placeholder,
-input[type="email"]:focus::placeholder {
+.form form input[type="text"]:focus::placeholder,
+.form form input[type="email"]:focus::placeholder {
 	color: transparent;
 	transform: translateX(calc(var(--input-padding) / 2));
 	transition-duration: 0ms;
 	transition-delay: 0ms;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="text"]:not(:placeholder-shown),
-input[type="email"]:not(:placeholder-shown) {
+.form form input[type="text"]:focus,
+.form form input[type="email"]:focus,
+.form form input[type="text"]:not(:placeholder-shown),
+.form form input[type="email"]:not(:placeholder-shown) {
 	padding: calc(var(--input-padding) * 2) var(--input-padding) var(--input-padding);
 }
 
-input[type="text"]:not(:placeholder-shown):invalid:not(:focus),
-input[type="email"]:not(:placeholder-shown):invalid:not(:focus) {
+.form form input[type="text"]:not(:placeholder-shown):invalid:not(:focus),
+.form form input[type="email"]:not(:placeholder-shown):invalid:not(:focus) {
 	color: var(--input-error-color);
 	border-color: var(--input-error-color);
 }
 
-input[type="text"]:not(:placeholder-shown):invalid:not(:focus) + label .error,
-input[type="email"]:not(:placeholder-shown):invalid:not(:focus) + label .error {
+.form form input[type="text"]:not(:placeholder-shown):invalid:not(:focus) + label .error,
+.form form input[type="email"]:not(:placeholder-shown):invalid:not(:focus) + label .error {
 	opacity: 1;
 }
 
-input[type="text"]:not(:placeholder-shown) + label,
-input[type="email"]:not(:placeholder-shown) + label {
+.form form input[type="text"]:not(:placeholder-shown) + label,
+.form form input[type="email"]:not(:placeholder-shown) + label {
 	opacity: 1;
 	transform: translateY(0);
 }
 
-input[type="text"]:-webkit-autofill + label,
-input[type="email"]:-webkit-autofill + label {
+.form form input[type="text"]:-webkit-autofill + label,
+.form form input[type="email"]:-webkit-autofill + label {
 	opacity: 1;
 }
 
-button {
+.form form button {
 	padding:
 		calc(var(--input-padding) * 1.5) calc(var(--input-padding) * 3);
 	width: 100%;
@@ -164,8 +164,8 @@ button {
 		transition var(--base-transition);
 }
 
-button:hover,
-button:focus {
+.form form button:hover,
+.form form button:focus {
 	cursor: pointer;
 	outline: none;
 	background-color: var(--button-focus-bg-color);
@@ -173,12 +173,12 @@ button:focus {
 	transform: translateY(1px);
 }
 
-button:active {
+.form form button:active {
 	transform: translateY(2px);
 }
 
 @media (min-width: 400px) {
-	button {
+	.form form button {
 		width: auto;
 	}
 }

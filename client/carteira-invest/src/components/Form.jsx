@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import styles from './Form.module.css';
-import Axios from "axios"
+import Axios from 'axios';
 
 export function Form(){
 	const [values, setValues] = useState();
@@ -17,8 +17,8 @@ export function Form(){
 			name: values.name,
 			cost: values.cost,
 			category: values.category
-		}).then((response)=>{
-			console.log(response)
+		}).then(()=>{
+			setListActives([])
 		})
 	}
 
@@ -62,6 +62,7 @@ export function Form(){
 					</button>
 				</form>
 			</div>
+			{}
 		</div>
 	)
 }

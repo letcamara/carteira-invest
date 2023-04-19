@@ -1,0 +1,40 @@
+.Card {
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.Card > div {
+    position: relative;
+    margin: 0 0 2em;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    overflow: hidden;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transition: all 0.3s ease-out;
+}
+
+.Card > div > p, 
+.Card > div > div {
+    padding: 10px 20px;
+}
+
+.Card > div > div {
+    background: #f4f6f6;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e1e1e1;
+}
+
+.Card > div:hover {
+    background: #f4f6f6;
+    cursor: pointer;
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.4);
+}
+
+.Card > div:hover > div {
+    background: none;
+    border-top: 1px solid transparent;
+    
+}

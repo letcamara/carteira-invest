@@ -1,30 +1,32 @@
 import styles from './Card.module.css';
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
+import FormDialog from './dialog/dialog'
 
-export function Card(){
-    const [listActives, setListActives] = useState();
+export function Card(props){
+    
+    const [open, setOpen] = React.useState(false);
 
-    useEffect(()=>{
-        Axios.get("http://localhost:5174/getCards").then((res) =>{
-            setListActives(res.data)
-        })
-    }, [])
-    return(
-        <div>
-            <h3>Cards</h3>
-            {
-            typeof listActives !== "undefined" &&
-            listActives.map((value) =>{
-                return <div key={value.id}>
-                    <p>{value.name}</p>
-                    <div>
-                        <span>{value.cost}</span>
-                        <span>{value.category}</span>
-                    </div>
+    const handleClickCard = () => {
+        setOpen(true)
+    }
+
+    return (
+        <div className={styles.Card}>
+            <FormDialog 
+                open={open} 
+                setOpen={setOpen} 
+                name={props.name} 
+                cost={props.cost} 
+                category={props.category}
+                id={props.id}
+            />
+            <div key={props.id} onClick={()=> handleClickCard()}>
+                <p>{props.name}</p>
+                <div>
+                    <span>{props.cost}</span>
+                    <span>{props.category}</span>
                 </div>
-            })
-            }
+            </div>
         </div>
     )
 }
